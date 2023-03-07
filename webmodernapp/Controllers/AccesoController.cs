@@ -43,6 +43,23 @@ namespace webmodernapp.Controllers
             return View(ListaElementos);
         }
 
+        public async Task<IActionResult> LlamadaGRAPH()
+        {
+            var contentStream = "";
+        IEnumerable < claseclima> ListaElementos = null;
+            var scope = _config.GetValue<string>("AzureAd:Scopes");
+            var accessToken = await _tokenAcquisition.GetAccessTokenForUserAsync(new[] { scope });
+            var httpClient = _http.CreateClient("apigraph");
+            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+            var httpResponseMessage = await httpClient.GetAsync("me/manager");
+            if (httpResponseMessage.IsSuccessStatusCode)
+            {
+                contentStream =
+                    await httpResponseMessage.Content.ReadAsStringAsync();
+                    //                ListaElementos = JsonSerializer.Deserialize<IEnumerable<claseclima>>(contentStream);
+            }
+            return View("LlamadaGRAPH", contentStream.Replace(",",",<br />"));
+        }
 
         public IActionResult MuestraToken()
         {

@@ -44,6 +44,12 @@ builder.Services.AddHttpClient("pidetoken", httpClient =>
     httpClient.DefaultRequestHeaders.Add("x-header-app", "webdemo");
 });
 
+builder.Services.AddHttpClient("apigraph", httpClient =>
+{
+    httpClient.BaseAddress = new Uri(_config.GetValue<string>("ApiAd:urlgraph"));
+    httpClient.DefaultRequestHeaders.Add("x-header-app", "webdemo");
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
