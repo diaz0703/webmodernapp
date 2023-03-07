@@ -5,9 +5,11 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webmodernapp", "webmodernapp\webmodernapp.csproj", "{1F9A457B-7F6E-4BB8-9312-D803F084B777}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapicourse", "webapicourse\webapicourse.csproj", "{57970EF0-02A8-49DF-BE07-08BBDA0C5DD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapicourse", "webapicourse\webapicourse.csproj", "{57970EF0-02A8-49DF-BE07-08BBDA0C5DD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commoncourse", "commoncourse\commoncourse.csproj", "{EC24A501-010B-4533-AD88-7FE9C2F4225A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "commoncourse", "commoncourse\commoncourse.csproj", "{EC24A501-010B-4533-AD88-7FE9C2F4225A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSALConsole", "MSALConsole\MSALConsole.csproj", "{F55C3E50-646A-4105-B758-D032BB90EE6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{EC24A501-010B-4533-AD88-7FE9C2F4225A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC24A501-010B-4533-AD88-7FE9C2F4225A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC24A501-010B-4533-AD88-7FE9C2F4225A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F55C3E50-646A-4105-B758-D032BB90EE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F55C3E50-646A-4105-B758-D032BB90EE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F55C3E50-646A-4105-B758-D032BB90EE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F55C3E50-646A-4105-B758-D032BB90EE6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
