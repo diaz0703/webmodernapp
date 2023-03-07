@@ -1,0 +1,31 @@
+﻿@using commoncourse;
+
+@model IEnumerable<claseclima>
+
+Los datos de la api
+
+
+<p>
+    <table class="table">
+        <thead>
+            <tr>
+            <td>Fecha</td>
+            <td>TemperaturaC</td>
+            <td>TemperaturaF</td>
+            <td>Resumen</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var _item in (IEnumerable<claseclima> )Model)
+            {
+                <tr>
+                    <td>@_item.Date</td>
+                    <td>@_item.TemperatureC</td>
+                    <td>@_item.TemperatureF</td>
+                    <td>@_item.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</p>

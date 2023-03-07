@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webmodernapp", "webmodernapp\webmodernapp.csproj", "{1F9A457B-7F6E-4BB8-9312-D803F084B777}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webmodernapp", "webmodernapp\webmodernapp.csproj", "{1F9A457B-7F6E-4BB8-9312-D803F084B777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webapicourse", "webapicourse\webapicourse.csproj", "{57970EF0-02A8-49DF-BE07-08BBDA0C5DD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commoncourse", "commoncourse\commoncourse.csproj", "{EC24A501-010B-4533-AD88-7FE9C2F4225A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1F9A457B-7F6E-4BB8-9312-D803F084B777}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F9A457B-7F6E-4BB8-9312-D803F084B777}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F9A457B-7F6E-4BB8-9312-D803F084B777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57970EF0-02A8-49DF-BE07-08BBDA0C5DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57970EF0-02A8-49DF-BE07-08BBDA0C5DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57970EF0-02A8-49DF-BE07-08BBDA0C5DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57970EF0-02A8-49DF-BE07-08BBDA0C5DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC24A501-010B-4533-AD88-7FE9C2F4225A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC24A501-010B-4533-AD88-7FE9C2F4225A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC24A501-010B-4533-AD88-7FE9C2F4225A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC24A501-010B-4533-AD88-7FE9C2F4225A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

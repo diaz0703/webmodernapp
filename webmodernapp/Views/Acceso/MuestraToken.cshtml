@@ -1,0 +1,26 @@
+﻿@model Dictionary<string, string>
+
+Los datos del token de identidad
+
+
+<p>
+    <table class="table">
+        <thead>
+            <tr>
+            <td>Claim</td>
+            <td>Valor</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var _item in (Dictionary<string, string>)Model)
+            {
+                <tr>
+                    <td>@_item.Key</td>
+                    <td>@_item.Value</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+</p>

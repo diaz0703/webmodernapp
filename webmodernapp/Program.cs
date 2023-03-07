@@ -4,12 +4,16 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
+using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
+IConfiguration _config = builder.Configuration;
+
 // Add services to the container.
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+    .AddMicrosoftIdentityWebApp(_config.GetSection("AzureAd"))
+    .EnableTokenAcquisitionToCallDownstreamApi().AddInMemoryTokenCaches();
 
 builder.Services.AddAuthorization(options =>
 {
@@ -23,8 +27,22 @@ builder.Services.AddControllersWithViews(options =>
         .Build();
     options.Filters.Add(new AuthorizeFilter(policy));
 });
+
+
 builder.Services.AddRazorPages()
     .AddMicrosoftIdentityUI();
+
+builder.Services.AddHttpClient("ApiProtegida", httpClient =>
+{
+    httpClient.BaseAddress = new Uri(_config.GetValue<string>("ApiAd:urlapi"));
+    httpClient.DefaultRequestHeaders.Add(
+        "x-header-app", "webdemo");
+});
+builder.Services.AddHttpClient("pidetoken", httpClient =>
+{
+    httpClient.BaseAddress = new Uri(_config.GetValue<string>("ApiAd:urltoken"));
+    httpClient.DefaultRequestHeaders.Add("x-header-app", "webdemo");
+});
 
 var app = builder.Build();
 
